@@ -2,9 +2,10 @@ name: attendance
 
 on:
   schedule:
-    - cron: '59 16 * * *'
+    - cron: '0 16 * * *'
   workflow_dispatch:
-
+  repository_dispatch:
+        types: start_action
 jobs:
   attendance:
     runs-on: ubuntu-latest
